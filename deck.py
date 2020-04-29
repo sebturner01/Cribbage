@@ -7,12 +7,13 @@
 # Imports
 #--------------------
 
-import random
+from random import shuffle
 
 #---------------------
 # Constants
 #---------------------
 
+DECK_LEN = 52
 
 suits = [n for n in range(4)]
 CLUBS = 0
@@ -26,6 +27,11 @@ JACK = 11
 QUEEN = 12
 KING = 13
 ACE = 1
+
+"""
+TODO:
+    Fix Documentation to PEP-8
+"""
 
 class Card:
     """The Card class represents a sinlge card in a deck of cards"""
@@ -49,7 +55,7 @@ class Deck:
     
     def shuffle(self):
         """Shuffles a deck of cards in place using random.shuffle()"""
-        random.shuffle(self.deck)
+        shuffle(self.deck)
 
     def getTopCard(self) -> Card:
         """Returns the top card from the deck"""
