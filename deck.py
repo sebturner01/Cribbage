@@ -69,5 +69,10 @@ class Deck:
     def addCards(self, cards: list):
         """Adds the given list of cards to the deck"""
         self.deck += cards
+    
+    def cutDeck(self, cutLoc: int):
+        """Cuts the deck such that the cards from cutLoc to the end of the deck
+        are placed ontop of the card from 0 to the cutLoc"""
+        self.deck = self.deck[cutLoc:] + self.deck[:cutLoc]
 
     
