@@ -39,7 +39,7 @@ class Deck:
         self.deck = self.makeDeck()
 
     def makeDeck(self):
-        """Makes a new deck of cards in order"""
+        """Makes a new deck of cards of length 52 in order"""
         cards = []
         for suit in suits:
             for val in cardValues:
@@ -66,5 +66,8 @@ class Deck:
                 if self.deck:
                     hands[player].append(self.getTopCard)
             card += 1
+    def addCards(self, cards: list):
+        """Adds the given list of cards to the deck"""
+        self.deck += cards
 
     
